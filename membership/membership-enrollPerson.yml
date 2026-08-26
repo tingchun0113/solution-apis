@@ -26,7 +26,7 @@ http:
           //     ]
         },
         "membershipInputData": {
-          "enrollmentSourceCode": "DEF"
+          "enrollmentSourceCode": "WA" //"WA" for internal; "DEF" for eva
         }
       }
   auth:
@@ -43,3 +43,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
