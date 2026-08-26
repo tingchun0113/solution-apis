@@ -1,0 +1,35 @@
+info:
+  name: /redemption/genericEvent
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{hostname}}/redemption/genericEvent"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "externalCode": "{{$randomUUID}}",
+        "partner": "EHT",
+        "awardCode": "EH0001",
+        "programCurrencyAmounts": [
+          {
+            "currency": "BC1",
+            "amount": 500
+          }
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

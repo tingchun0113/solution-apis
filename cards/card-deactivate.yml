@@ -1,0 +1,28 @@
+info:
+  name: /card/deactivate
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{hostname}}/card/deactivate"
+  body:
+    type: json
+    data: |-
+      {
+        //   "membershipReference": {
+        //     "id": "{{custNo}}",
+        //     "type": "CUSTNO"
+        //   },
+        "ffpMemberNumber": {{custNo}},
+        "cardType": "AEP"
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

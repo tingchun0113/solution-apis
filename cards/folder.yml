@@ -1,0 +1,7 @@
+info:
+  name: cards
+  type: folder
+  seq: 6
+
+request:
+  auth: inherit

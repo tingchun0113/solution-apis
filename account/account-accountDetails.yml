@@ -1,0 +1,21 @@
+info:
+  name: /account/accountDetails
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{hostname}}/account/accountDetails?membershipReferenceId={{custNo}}"
+  params:
+    - name: membershipReferenceId
+      value: "{{custNo}}"
+      type: query
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

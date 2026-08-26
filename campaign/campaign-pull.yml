@@ -1,0 +1,26 @@
+info:
+  name: /campaign/pull
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{hostname}}/campaign/pull"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
