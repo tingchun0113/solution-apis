@@ -1,7 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: Solution APIs
+  name: solution-apis
 config:
   proxy:
     inherit: true
