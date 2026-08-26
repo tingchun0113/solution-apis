@@ -1,15 +1,15 @@
-name: demo-eva-collection
+name: demo-internal
 variables:
   - name: hostname
-    value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
+    value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
   - name: username
     value: admin
   - name: custNo
-    value: "754907616"
+    value: "538277102"
   - name: firstName
-    value: Kaitlin
+    value: Sylvester
   - name: lastName
-    value: Schimmel
+    value: Oberbrunner
   - secret: true
     name: password
   - secret: true
