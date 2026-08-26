@@ -1,0 +1,53 @@
+info:
+  name: /redemption/redeemAirAwardUpgrade
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{hostname}}/redemption/redeemAirAwardUpgrade"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "externalCode": "{{$randomUUID}}",
+        "partner": "BR",
+        "awardCode": "CDUPG",
+        "flightInfo": {
+          "origin": "MUC",
+          "destination": "VIE",
+          "passengers": [
+            {
+              "identifier": "{{$randomInt}}",
+              "passengerFirstName": "{{firstName}}",
+              "passengerLastName": "{{lastName}}"
+            }
+          ],
+          "segments": [
+            {
+              "identifier": "{{$randomInt}}",
+              "origin": "MUC",
+              "destination": "VIE",
+              "airlineCode": "BR",
+              "flightNumber": 101,
+              "flightDate": "2026-11-05",
+              "paidClass": "C"
+            }
+          ]
+        },
+        "currency": "BC2",
+        "basePrice": 1
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

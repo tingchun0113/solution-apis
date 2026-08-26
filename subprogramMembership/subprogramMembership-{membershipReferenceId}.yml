@@ -1,0 +1,17 @@
+info:
+  name: /subprogramMembership/{membershipReferenceId}
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{hostname}}/subprogramMembership/{{custNo}}"
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

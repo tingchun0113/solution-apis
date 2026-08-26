@@ -1,0 +1,28 @@
+info:
+  name: /campaign/registerMemberToCampaign
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{hostname}}/campaign/registerMemberToCampaign"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "registrationCode": "HOLIDAY",
+        "registrationDate": "2026-08-13"
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

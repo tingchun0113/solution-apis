@@ -1,0 +1,30 @@
+info:
+  name: /membership/createTierLevelEntitlement
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{hostname}}/membership/createTierLevelEntitlement"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "tierLevel": "TIER_3",
+        "tierLevelReason": "NOMINATED",
+        "activeFrom": "2026-08-11",
+        "activeTo": "2027-08-10"
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

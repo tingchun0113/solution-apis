@@ -1,0 +1,44 @@
+info:
+  name: /accrual/airEventOpe
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{hostname}}/accrual/airEventOpe"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "eventData": {
+          "retroAccrual": false,
+          "sendingAirline": "BR",
+          "receivingAirline": "BR",
+          "ffpProgram": "BR",
+          "lastName": "{{lastName}}",
+          "firstName": "{{firstName}}",
+          "operatingAirline": "BR",
+          "operatingFlightNumber": 72,
+          "marketingAirline": "BR",
+          "marketingFlightNumber": 72,
+          "origin": "MUC",
+          "destination": "TPE",
+          "operatingBookingClass": "K",
+          "creditedBookingClass": "K",
+          "marketingBookingClass": "K",
+          "flightDepartureDate": "2026-08-03"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

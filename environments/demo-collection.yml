@@ -1,0 +1,16 @@
+name: demo-eva-collection
+variables:
+  - name: hostname
+    value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
+  - name: username
+    value: admin
+  - name: custNo
+    value: "754907616"
+  - name: firstName
+    value: Kaitlin
+  - name: lastName
+    value: Schimmel
+  - secret: true
+    name: password
+  - secret: true
+    name: accessToken

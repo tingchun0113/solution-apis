@@ -1,0 +1,63 @@
+info:
+  name: /redemption/redeemAirAwardTicket
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{hostname}}/redemption/redeemAirAwardTicket"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "externalCode": "{{$randomUUID}}",
+        "partner": "BR",
+        "activityDateTime": "2026-08-01",
+        "awardCode": "CDTKT",
+        "flightInfo": {
+          "origin": "MUC",
+          "destination": "TPE",
+          "passengers": [
+            {
+              "identifier": "{{$randomInt}}",
+              "passengerFirstName": "{{firstName}}",
+              "passengerLastName": "{{lastName}}"
+            }
+          ],
+          "segments": [
+            {
+              "identifier": "{{$randomInt}}",
+              "origin": "MUC",
+              "destination": "VIE",
+              "airlineCode": "BR",
+              "flightNumber": 101,
+              "flightDate": "2026-11-05",
+              "paidClass": "B"
+            },
+            {
+              "identifier": "{{$randomInt}}",
+              "origin": "VIE",
+              "destination": "TPE",
+              "airlineCode": "BR",
+              "flightNumber": 102,
+              "flightDate": "2026-11-05",
+              "paidClass": "B"
+            }
+          ]
+        },
+        "currency": "BC1",
+        "basePrice": 1500
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
