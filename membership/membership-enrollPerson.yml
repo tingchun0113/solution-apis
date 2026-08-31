@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{hostname}}/membership/enrollPerson"
+  url: "{{baseURL}}/membership/enrollPerson"
   body:
     type: json
     data: |-

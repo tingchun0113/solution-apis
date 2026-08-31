@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{hostname}}/geography/distance/MUC/TPE"
+  url: "{{baseURL}}/geography/distance/MUC/TPE"
   auth:
     type: bearer
     token: "{{accessToken}}"
@@ -15,3 +15,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

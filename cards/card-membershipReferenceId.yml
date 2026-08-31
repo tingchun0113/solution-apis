@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{hostname}}/card?membershipReferenceId={{custNo}}"
+  url: "{{baseURL}}/card?membershipReferenceId={{custNo}}"
   params:
     - name: membershipReferenceId
       value: "{{custNo}}"
@@ -19,3 +19,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

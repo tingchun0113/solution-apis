@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{hostname}}/campaign/registerMemberToCampaign"
+  url: "{{baseURL}}/campaign/registerMemberToCampaign"
   body:
     type: json
     data: |-
@@ -26,3 +26,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
