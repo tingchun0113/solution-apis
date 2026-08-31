@@ -21,6 +21,15 @@ runtime:
   scripts:
     - type: after-response
       code: bru.setVar("accessToken", res.body.access_token);
+    - type: tests
+      code: |-
+        test("200 status code", function () {
+          expect(res.getStatus()).to.eql(200);
+        });
+
+        test("body has access_token", function () {
+          expect(res.getBody()).to.have.property("access_token");
+        });
 
 settings:
   encodeUrl: true
