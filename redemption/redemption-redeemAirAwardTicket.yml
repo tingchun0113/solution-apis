@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{hostname}}/redemption/redeemAirAwardTicket"
+  url: "{{baseURL}}/redemption/redeemAirAwardTicket"
   body:
     type: json
     data: |-
@@ -61,3 +61,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

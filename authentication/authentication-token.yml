@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{hostname}}/authentication/authToken"
+  url: "{{baseURL}}/authentication/authToken"
   body:
     type: form-urlencoded
     data:
@@ -27,3 +27,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

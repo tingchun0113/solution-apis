@@ -1,15 +1,20 @@
 name: demo-internal
 variables:
-  - name: hostname
+  - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
+    description: ""
   - name: username
     value: admin
+    description: ""
   - name: custNo
     value: "538277102"
+    description: ""
   - name: firstName
     value: Sylvester
+    description: ""
   - name: lastName
     value: Oberbrunner
+    description: ""
   - secret: true
     name: password
   - secret: true

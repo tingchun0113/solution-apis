@@ -1,15 +1,20 @@
 name: demo-eva
 variables:
-  - name: hostname
+  - name: baseURL
     value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
+    description: ""
   - name: username
     value: admin
+    description: ""
   - name: custNo
     value: "754907616"
+    description: ""
   - name: firstName
     value: Kaitlin
+    description: ""
   - name: lastName
     value: Schimmel
+    description: ""
   - secret: true
     name: password
     description: ""
