@@ -15,11 +15,11 @@ http:
           "type": "CUSTNO"
         },
         "externalCode": "{{$randomUUID}}",
-        "partner": "EHT",
-        "awardCode": "EH0001",
+        "partner": "{{PARTNER_STANDARD}}",
+        "awardCode": "{{awardCode}}",
         "programCurrencyAmounts": [
           {
-            "currency": "BC1",
+            "currency": "{{PROGRAM_CURRENCY}}",
             "amount": 500
           }
         ]
