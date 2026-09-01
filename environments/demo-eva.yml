@@ -15,18 +15,21 @@ variables:
   - name: ENROLLMENT_SOURCE_CODE
     value: DEF
     description: ""
-  - secret: true
-    name: password
-    description: ""
-  - secret: true
-    name: accessToken
-    description: ""
-  - secret: true
-    name: username
-    description: ""
   - name: PARTNER_STANDARD
-    value: PC
+    value: EHT
     description: ""
   - name: accrualCode
-    value: BUY
+    value: EH001
     description: ""
+  - name: awardCode
+    value: EH0001
+    description: ""
+  - name: PROGRAM_CURRENCY
+    value: BC1
+    description: ""
+  - secret: true
+    name: password
+  - secret: true
+    name: accessToken
+  - secret: true
+    name: username

@@ -2,21 +2,37 @@ name: demo-internal
 variables:
   - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
+    description: ""
   - name: custNo
     value: "220704211"
+    description: ""
   - name: firstName
     value: Julie
+    description: ""
   - name: lastName
     value: Fritsch
+    description: ""
   - name: ENROLLMENT_SOURCE_CODE
     value: WA
+    description: ""
   - name: PARTNER_STANDARD
     value: AVU
-  - secret: true
-    name: password
-  - secret: true
-    name: accessToken
-  - secret: true
-    name: username
+    description: ""
   - name: accrualCode
     value: CAR001
+    description: ""
+  - name: awardCode
+    value: AVU00001
+    description: ""
+  - name: PROGRAM_CURRENCY
+    value: BC1
+    description: ""
+  - secret: true
+    name: password
+    description: ""
+  - secret: true
+    name: accessToken
+    description: ""
+  - secret: true
+    name: username
+    description: ""

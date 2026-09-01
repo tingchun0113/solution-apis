@@ -1,5 +1,5 @@
 info:
-  name: /card?membershipReferenceId
+  name: /card?membershipReferenceId={membershipReferenceId}
   type: http
   seq: 1
 
