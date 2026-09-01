@@ -15,8 +15,8 @@ http:
           "type": "CUSTNO"
         },
         "externalCode": "{{$randomUUID}}",
-        "partner": "PC",
-        "accrualCode": "BUY",
+        "partner": "{{PARTNER_STANDARD}}",
+        "accrualCode": "{{accrualCode}}",
         "value": 10000,
         "actionType": "CREDIT"
       }
