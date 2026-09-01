@@ -1,0 +1,30 @@
+info:
+  name: /membership/updateProfile
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseURL}}/membership/updateProfile"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReference": {
+          "id": "{{custNo}}",
+          "type": "CUSTNO"
+        },
+        "customerProfileData": {
+          "memberStateAction": "INACT"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
