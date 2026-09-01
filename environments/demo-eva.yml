@@ -2,15 +2,17 @@ name: demo-eva
 variables:
   - name: baseURL
     value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
-  - name: username
-    value: admin
   - name: custNo
-    value: "416529689"
+    value: "237004162"
   - name: firstName
-    value: Linwood
+    value: Napoleon
   - name: lastName
-    value: Hansen
+    value: Smith
+  - name: ENROLLMENT_SOURCE_CODE
+    value: DEF
   - secret: true
     name: password
   - secret: true
     name: accessToken
+  - secret: true
+    name: username
