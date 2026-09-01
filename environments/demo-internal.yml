@@ -3,9 +3,6 @@ variables:
   - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
     description: ""
-  - name: username
-    value: admin
-    description: ""
   - name: custNo
     value: "538277102"
     description: ""
@@ -15,7 +12,15 @@ variables:
   - name: lastName
     value: Oberbrunner
     description: ""
+  - name: ENROLLMENT_SOURCE_CODE
+    value: WA
+    description: ""
   - secret: true
     name: password
+    description: ""
   - secret: true
     name: accessToken
+    description: ""
+  - secret: true
+    name: username
+    description: ""
