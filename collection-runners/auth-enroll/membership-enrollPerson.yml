@@ -1,0 +1,46 @@
+info:
+  name: /membership/enrollPerson
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseURL}}/membership/enrollPerson"
+  body:
+    type: json
+    data: |-
+      {
+        "customerInputData": {
+          "customerType": "PERSONAL",
+          "customerDetails": {
+            "firstName": "{{$randomFirstName}}",
+            "lastName": "{{$randomLastName}}",
+            "dateOfBirth": "2000-03-31",
+            "countryOfResidence": "TW"
+          }
+          //     "aliasInputDataList": [
+          //       {
+          //         "customerAliasType": "TID",
+          //         "customerAliasCode": "A123456789"
+          //       }
+          //     ]
+        },
+        "membershipInputData": {
+          "enrollmentSourceCode": "DEF" //"WA" for internal; "DEF" for eva
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: bru.setEnvVar("custNo", res.body.response.enrollPersonResponse.code);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
