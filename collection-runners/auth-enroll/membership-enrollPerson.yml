@@ -36,7 +36,10 @@ http:
 runtime:
   scripts:
     - type: after-response
-      code: bru.setEnvVar("custNo", res.body.response.enrollPersonResponse.code);
+      code: |-
+        const custNo = res.body?.response?.enrollPersonResponse?.code ?? "";
+
+        bru.setEnvVar("custNo", custNo);
 
 settings:
   encodeUrl: true

@@ -2,31 +2,22 @@ name: demo-eva
 variables:
   - name: baseURL
     value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
-    description: ""
   - name: custNo
-    value: "237004162"
-    description: ""
+    value: "178480220"
   - name: firstName
-    value: Napoleon
-    description: ""
+    value: Loraine
   - name: lastName
-    value: Smith
-    description: ""
+    value: Carter
   - name: ENROLLMENT_SOURCE_CODE
     value: DEF
-    description: ""
   - name: PARTNER_STANDARD
     value: EHT
-    description: ""
   - name: accrualCode
     value: EH001
-    description: ""
   - name: awardCode
     value: EH0001
-    description: ""
   - name: PROGRAM_CURRENCY
     value: BC1
-    description: ""
   - secret: true
     name: password
   - secret: true

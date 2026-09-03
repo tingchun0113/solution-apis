@@ -14,8 +14,15 @@ runtime:
   scripts:
     - type: after-response
       code: |-
-        bru.setEnvVar("firstName", res.body.response.profileDetailsResponse.customerDetails.firstName);
-        bru.setEnvVar("lastName", res.body.response.profileDetailsResponse.customerDetails.lastName);
+        const customerDetails =
+          res.body?.response?.profileDetailsResponse?.customerDetails;
+
+        if (customerDetails?.firstName && customerDetails?.lastName) {
+          const { firstName, lastName } = customerDetails;
+
+          bru.setEnvVar("firstName", firstName);
+          bru.setEnvVar("lastName", lastName);
+        }
 
 settings:
   encodeUrl: true

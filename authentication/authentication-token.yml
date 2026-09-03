@@ -20,7 +20,10 @@ http:
 runtime:
   scripts:
     - type: after-response
-      code: bru.setVar("accessToken", res.body.access_token);
+      code: |-
+        const accessToken = res.body?.access_token ?? "";
+
+        bru.setVar("accessToken", accessToken);
     - type: tests
       code: |-
         test("200 status code", function () {
