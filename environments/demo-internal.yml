@@ -18,9 +18,15 @@ variables:
     value: AVU00001
   - name: PROGRAM_CURRENCY
     value: BC1
+  - name: CARD_TYPE
+    value: T0_SC_PHY
   - secret: true
     name: password
   - secret: true
     name: accessToken
   - secret: true
     name: username
+  - name: TIER_LEVEL
+    value: TIER_3
+  - name: TIER_LEVEL_REASON
+    value: CASH

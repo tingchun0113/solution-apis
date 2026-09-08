@@ -14,10 +14,10 @@ http:
           "id": "{{custNo}}",
           "type": "CUSTNO"
         },
-        "tierLevel": "TIER_3",
-        "tierLevelReason": "NOMINATED",
-        "activeFrom": "2026-08-11",
-        "activeTo": "2027-08-10"
+        "tierLevel": "{{TIER_LEVEL}}",
+        "tierLevelReason": "{{TIER_LEVEL_REASON}}",
+        "activeFrom": "2026-09-08",
+        "activeTo": "2027-09-07"
       }
   auth:
     type: bearer
