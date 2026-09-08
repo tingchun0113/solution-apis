@@ -14,8 +14,8 @@ http:
           "id": "{{custNo}}",
           "type": "CUSTNO"
         },
-        "primaryCard": true,
-        "cardType": "AEP"
+        "primaryCard": false,
+        "cardType": "{{CARD_TYPE}}"
       }
   auth:
     type: bearer

@@ -4,13 +4,13 @@ variables:
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
     description: ""
   - name: custNo
-    value: "220704211"
+    value: "782492400"
     description: ""
   - name: firstName
-    value: Julie
+    value: Eloisa
     description: ""
   - name: lastName
-    value: Fritsch
+    value: Lesch
     description: ""
   - name: ENROLLMENT_SOURCE_CODE
     value: WA
@@ -27,6 +27,9 @@ variables:
   - name: PROGRAM_CURRENCY
     value: BC1
     description: ""
+  - name: CARD_TYPE
+    value: T0_SC_PHY
+    description: ""
   - secret: true
     name: password
     description: ""
@@ -35,4 +38,10 @@ variables:
     description: ""
   - secret: true
     name: username
+    description: ""
+  - name: TIER_LEVEL
+    value: TIER_3
+    description: ""
+  - name: TIER_LEVEL_REASON
+    value: CASH
     description: ""

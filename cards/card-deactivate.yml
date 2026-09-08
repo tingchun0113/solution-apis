@@ -15,7 +15,7 @@ http:
         //     "type": "CUSTNO"
         //   },
         "ffpMemberNumber": {{custNo}},
-        "cardType": "AEP"
+        "cardType": "{{CARD_TYPE}}"
       }
   auth:
     type: bearer
