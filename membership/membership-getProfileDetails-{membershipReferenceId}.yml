@@ -14,11 +14,15 @@ runtime:
   scripts:
     - type: after-response
       code: |-
-        const { firstName = "", lastName = "" } =
-          res.body?.response?.profileDetailsResponse?.customerDetails || {};
+        const customerDetails =
+          res.body?.response?.profileDetailsResponse?.customerDetails;
 
-        bru.setEnvVar("firstName", firstName);
-        bru.setEnvVar("lastName", lastName);
+        if (customerDetails?.firstName && customerDetails?.lastName) {
+          const { firstName, lastName } = customerDetails;
+
+          bru.setEnvVar("firstName", firstName);
+          bru.setEnvVar("lastName", lastName);
+        }
 
 settings:
   encodeUrl: true

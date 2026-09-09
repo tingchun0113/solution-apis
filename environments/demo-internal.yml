@@ -2,46 +2,31 @@ name: demo-internal
 variables:
   - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
-    description: ""
   - name: custNo
-    value: "782492400"
-    description: ""
+    value: "194651651"
   - name: firstName
-    value: Eloisa
-    description: ""
+    value: Ramiro
   - name: lastName
-    value: Lesch
-    description: ""
+    value: Rempel
   - name: ENROLLMENT_SOURCE_CODE
     value: WA
-    description: ""
   - name: PARTNER_STANDARD
     value: AVU
-    description: ""
   - name: accrualCode
     value: CAR001
-    description: ""
   - name: awardCode
     value: AVU00001
-    description: ""
   - name: PROGRAM_CURRENCY
     value: BC1
-    description: ""
   - name: CARD_TYPE
     value: T0_SC_PHY
-    description: ""
   - secret: true
     name: password
-    description: ""
   - secret: true
     name: accessToken
-    description: ""
   - secret: true
     name: username
-    description: ""
   - name: TIER_LEVEL
     value: TIER_3
-    description: ""
   - name: TIER_LEVEL_REASON
     value: CASH
-    description: ""
