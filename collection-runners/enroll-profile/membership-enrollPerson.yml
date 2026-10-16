@@ -17,13 +17,14 @@ http:
             "lastName": "{{$randomLastName}}",
             "dateOfBirth": "2000-03-31",
             "countryOfResidence": "TW"
+          },
+          "customerExtensionDataContainer": {
+            "innerObject": {
+              "identifier": "{{$randomUUID}}",
+              "typeCode": "1",
+              "countryCode": "US"
+            }
           }
-          //     "aliasInputDataList": [
-          //       {
-          //         "customerAliasType": "TID",
-          //         "customerAliasCode": "A123456789"
-          //       }
-          //     ]
         },
         "membershipInputData": {
           "enrollmentSourceCode": "{{ENROLLMENT_SOURCE_CODE}}"
