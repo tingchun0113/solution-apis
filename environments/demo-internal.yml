@@ -3,11 +3,11 @@ variables:
   - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
   - name: custNo
-    value: "194651651"
+    value: "731086507"
   - name: firstName
-    value: Ramiro
+    value: Patrick
   - name: lastName
-    value: Rempel
+    value: Considine
   - name: ENROLLMENT_SOURCE_CODE
     value: WA
   - name: PARTNER_STANDARD
