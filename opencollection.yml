@@ -13,6 +13,52 @@ config:
         username: ""
         password: ""
       bypassProxy: ""
+
+request:
+  scripts:
+    - type: before-request
+      code: |-
+        const formatDate = (date) =>
+          date.toISOString().split("T")[0];
+
+        const addYears = (date, years) => {
+          const result = new Date(date);
+          result.setFullYear(result.getFullYear() + years);
+          return result;
+        };
+
+        const randomDateBetween = (start, end) =>
+          new Date(
+            start.getTime() +
+            Math.random() * (end.getTime() - start.getTime())
+          );
+
+        const today = new Date();
+
+
+        // Today
+        bru.setVar("today", formatDate(today));
+
+
+        // Configurable offset
+        const yearsOffset = Number(bru.getEnvVar("yearsOffset") ?? 3);
+
+        bru.setVar("dateYearsAgo", formatDate(addYears(today, -yearsOffset)));
+        bru.setVar("dateYearsFromToday", formatDate(addYears(today, yearsOffset)));
+
+
+        // Date of birth
+        const ageMin = Number(bru.getEnvVar("ageMin") ?? 18);
+        const ageMax = Number(bru.getEnvVar("ageMax") ?? 80);
+
+        const youngestDOB = addYears(today, -ageMin);
+        const oldestDOB = addYears(today, -ageMax - 1);
+        oldestDOB.setDate(oldestDOB.getDate() + 1);
+
+        bru.setVar(
+          "dateOfBirth",
+          formatDate(randomDateBetween(oldestDOB, youngestDOB))
+        );
 bundled: false
 extensions:
   bruno:

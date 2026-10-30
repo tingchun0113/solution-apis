@@ -3,11 +3,11 @@ variables:
   - name: baseURL
     value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
   - name: custNo
-    value: "767821233"
+    value: "760022671"
   - name: firstName
-    value: Dora
+    value: Kiel
   - name: lastName
-    value: Armstrong
+    value: Stamm
   - name: ENROLLMENT_SOURCE_CODE
     value: DEF
   - name: PARTNER_STANDARD
@@ -18,15 +18,21 @@ variables:
     value: EH0001
   - name: PROGRAM_CURRENCY
     value: BC1
-  - secret: true
-    name: password
-  - secret: true
-    name: accessToken
-  - secret: true
-    name: username
   - name: CARD_TYPE
     value: AEP
   - name: TIER_LEVEL
     value: TIER_3
   - name: TIER_LEVEL_REASON
     value: NOMINATED
+  - name: ageMin
+    value: "18"
+  - name: ageMax
+    value: "80"
+  - name: yearsOffset
+    value: "3"
+  - secret: true
+    name: password
+  - secret: true
+    name: accessToken
+  - secret: true
+    name: username

@@ -16,8 +16,8 @@ http:
         },
         "tierLevel": "{{TIER_LEVEL}}",
         "tierLevelReason": "{{TIER_LEVEL_REASON}}",
-        "activeFrom": "2026-09-08",
-        "activeTo": "2027-09-07"
+        "activeFrom": "{{today}}",
+        "activeTo": "{{dateYearsFromToday}}"
       }
   auth:
     type: bearer

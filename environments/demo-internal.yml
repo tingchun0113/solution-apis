@@ -3,11 +3,11 @@ variables:
   - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
   - name: custNo
-    value: "731086507"
+    value: "312907652"
   - name: firstName
-    value: Patrick
+    value: Salvatore
   - name: lastName
-    value: Considine
+    value: Pagac
   - name: ENROLLMENT_SOURCE_CODE
     value: WA
   - name: PARTNER_STANDARD
@@ -30,3 +30,9 @@ variables:
     value: TIER_3
   - name: TIER_LEVEL_REASON
     value: CASH
+  - name: ageMin
+    value: "18"
+  - name: ageMax
+    value: "80"
+  - name: yearsOffset
+    value: "3"

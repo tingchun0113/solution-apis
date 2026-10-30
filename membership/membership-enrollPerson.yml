@@ -15,15 +15,15 @@ http:
           "customerDetails": {
             "firstName": "{{$randomFirstName}}",
             "lastName": "{{$randomLastName}}",
-            "dateOfBirth": "2000-03-31",
+            "dateOfBirth": "{{dateOfBirth}}",
             "countryOfResidence": "TW"
-          }
-          //     "aliasInputDataList": [
-          //       {
-          //         "customerAliasType": "TID",
-          //         "customerAliasCode": "A123456789"
-          //       }
-          //     ]
+          },
+          "aliasInputDataList": [
+      //       {
+      //         "customerAliasType": "TID",
+      //         "customerAliasCode": "A123456789"
+      //       }
+          ]
         },
         "membershipInputData": {
           "enrollmentSourceCode": "{{ENROLLMENT_SOURCE_CODE}}"

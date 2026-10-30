@@ -15,7 +15,7 @@ http:
           "customerDetails": {
             "firstName": "{{$randomFirstName}}",
             "lastName": "{{$randomLastName}}",
-            "dateOfBirth": "2000-03-31",
+            "dateOfBirth": "{{dateOfBirth}}",
             "countryOfResidence": "TW"
           },
           "customerExtensionDataContainer": {
