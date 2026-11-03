@@ -1,0 +1,42 @@
+info:
+  name: /accrual/informativeRatingStandard
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{baseURL}}/accrual/informativeRatingStandard"
+  body:
+    type: json
+    data: |-
+      {
+        "genericAccrualEventData": {
+          "membershipAliasIdentification": {
+            "membershipAliasCode": "{{custNo}}",
+            "membershipAliasTypeList": [
+              {
+                "code": "CUSTNO"
+              }
+            ]
+          },
+          "externalCode": "{{$randomUUID}}",
+          "partner": "{{PARTNER_STANDARD}}",
+          "accrualCode": "{{accrualCode}}",
+          "value": 10000,
+          "actionType": "CREDIT"
+        },
+        "tierLevel": "{{TIER_LEVEL}}",
+        "subprograms": [
+          "{{SUBPROGRAM}}"
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,33 @@
+info:
+  name: /accrual/informativeRating
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseURL}}/accrual/informativeRating"
+  body:
+    type: json
+    data: |-
+      {
+        "airEventData": {
+          "origin": "{{origin}}",
+          "destination": "{{destination}}",
+          "operatingAirline": "{{PARTNER_AIR}}",
+          "creditedBookingClass": "B"
+        },
+        "tierLevel": "{{TIER_LEVEL}}",
+        "subprograms": [
+          "{{SUBPROGRAM}}"
+        ]
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
