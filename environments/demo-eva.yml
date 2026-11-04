@@ -2,67 +2,45 @@ name: demo-eva
 variables:
   - name: baseURL
     value: https://demo-eva.lms-demo.lms.lpsolutions.com/api/lms/v109
-    description: ""
   - name: custNo
-    value: "760022671"
-    description: ""
+    value: "137134046"
   - name: firstName
     value: Maximillia
-    description: ""
   - name: lastName
     value: Koepp
-    description: ""
   - name: ENROLLMENT_SOURCE_CODE
     value: DEF
-    description: ""
   - name: PARTNER_AIR
     value: BR
-    description: ""
   - name: origin
     value: MUC
-    description: ""
   - name: destination
     value: TPE
-    description: ""
   - name: PARTNER_STANDARD
     value: EHT
-    description: ""
   - name: accrualCode
     value: EH001
-    description: ""
   - name: awardCode
     value: EH0001
-    description: ""
   - name: PROGRAM_CURRENCY
     value: BC1
-    description: ""
   - name: CARD_TYPE
     value: AEP
-    description: ""
   - name: TIER_LEVEL
     value: TIER_3
-    description: ""
   - name: TIER_LEVEL_REASON
     value: NOMINATED
-    description: ""
   - name: SUBPROGRAM
     value: AEP
-    description: ""
   - name: ageMin
     value: "18"
-    description: ""
   - name: ageMax
     value: "80"
-    description: ""
   - secret: true
     name: password
-    description: ""
   - secret: true
     name: accessToken
-    description: ""
   - secret: true
     name: username
-    description: ""
   - name: yearsOffset
     value: "3"
-    description: ""

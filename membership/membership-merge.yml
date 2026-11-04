@@ -1,0 +1,31 @@
+info:
+  name: /membership/merge
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{baseURL}}/membership/merge"
+  body:
+    type: json
+    data: |-
+      {
+        "membershipReferenceSource": {
+          "id": "238124790",
+          "type": "CUSTNO"
+        },
+        "membershipReferenceTarget": {
+          "id": "789751621",
+          "type": "CUSTNO"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
