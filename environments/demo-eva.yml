@@ -5,9 +5,9 @@ variables:
   - name: custNo
     value: "137134046"
   - name: firstName
-    value: Maximillia
+    value: Ariane
   - name: lastName
-    value: Koepp
+    value: Cartwright
   - name: ENROLLMENT_SOURCE_CODE
     value: DEF
   - name: PARTNER_AIR
@@ -22,6 +22,8 @@ variables:
     value: EH001
   - name: awardCode
     value: EH0001
+  - name: certificateCode
+    value: "02204030000403"
   - name: PROGRAM_CURRENCY
     value: BC1
   - name: CARD_TYPE
@@ -34,13 +36,13 @@ variables:
     value: AEP
   - name: ageMin
     value: "18"
-  - name: ageMax
-    value: "80"
   - secret: true
     name: password
   - secret: true
     name: accessToken
   - secret: true
     name: username
+  - name: ageMax
+    value: "80"
   - name: yearsOffset
     value: "3"

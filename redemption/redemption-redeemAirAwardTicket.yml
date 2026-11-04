@@ -16,7 +16,7 @@ http:
         },
         "externalCode": "{{$randomUUID}}",
         "partner": "BR",
-        "activityDateTime": "2026-08-01",
+        "activityDateTime": "2026-10-01",
         "awardCode": "CDTKT",
         "flightInfo": {
           "origin": "MUC",
@@ -49,12 +49,20 @@ http:
             }
           ]
         },
-        "currency": "BC1",
+        "currency": "{{PROGRAM_CURRENCY}}",
         "basePrice": 1500
       }
   auth:
     type: bearer
     token: "{{accessToken}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const certificateCode = res.body?.response?.certificateCode ?? "";
+
+        bru.setEnvVar("certificateCode", certificateCode);
 
 settings:
   encodeUrl: true

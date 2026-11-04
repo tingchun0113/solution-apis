@@ -28,6 +28,14 @@ http:
     type: bearer
     token: "{{accessToken}}"
 
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const certificateCode = res.body?.response?.certificateCode ?? "";
+
+        bru.setEnvVar("certificateCode", certificateCode);
+
 settings:
   encodeUrl: true
   timeout: 0

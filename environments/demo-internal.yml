@@ -2,45 +2,70 @@ name: demo-internal
 variables:
   - name: baseURL
     value: https://master.lms-dev.aws.lpsolutions.com/api/lms/v109
+    description: ""
   - name: custNo
     value: "789751621"
+    description: ""
   - name: firstName
     value: Juston
+    description: ""
   - name: lastName
     value: Grimes
+    description: ""
   - name: ENROLLMENT_SOURCE_CODE
     value: WA
+    description: ""
   - name: PARTNER_AIR
     value: WA
+    description: ""
   - name: origin
     value: MUC
+    description: ""
   - name: destination
     value: THU
+    description: ""
   - name: PARTNER_STANDARD
     value: AVU
+    description: ""
   - name: accrualCode
     value: CAR001
+    description: ""
   - name: awardCode
     value: AVU00001
+    description: ""
+  - name: certificateCode
+    value: ""
+    description: ""
   - name: PROGRAM_CURRENCY
     value: BC1
+    description: ""
   - name: CARD_TYPE
     value: T0_SC_PHY
+    description: ""
   - name: TIER_LEVEL
     value: TIER_3
+    description: ""
   - name: TIER_LEVEL_REASON
     value: CASH
+    description: ""
   - name: SUBPROGRAM
     value: WWBC
+    description: ""
   - name: ageMin
     value: "18"
+    description: ""
   - name: ageMax
     value: "80"
-  - name: yearsOffset
-    value: "3"
+    description: ""
   - secret: true
     name: password
+    description: ""
   - secret: true
     name: accessToken
+    description: ""
   - secret: true
     name: username
+    description: ""
+  - name: yearsOffset
+    value: "3"
+    description: ""
