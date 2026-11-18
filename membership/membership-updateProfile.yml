@@ -1,7 +1,7 @@
 info:
   name: /membership/updateProfile
   type: http
-  seq: 5
+  seq: 8
 
 http:
   method: POST
