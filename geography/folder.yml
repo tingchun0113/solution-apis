@@ -1,7 +1,7 @@
 info:
   name: geography
   type: folder
-  seq: 11
+  seq: 12
 
 request:
   auth: inherit

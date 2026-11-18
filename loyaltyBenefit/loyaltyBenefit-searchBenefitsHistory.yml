@@ -15,7 +15,7 @@ http:
           "type": "CUSTNO"
         },
         "fromDate": "2026-08-10",
-        "toDate": "2026-08-15"
+        "toDate": "{{today}}"
       }
   auth:
     type: bearer

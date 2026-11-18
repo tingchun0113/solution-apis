@@ -1,0 +1,18 @@
+info:
+  name: /rating/choice/{membershipReferenceId}
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseURL}}/rating/choice/{{custNo}}"
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
